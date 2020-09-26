@@ -1,5 +1,7 @@
 <template>
-   <div class="box">我是登录页面</div>
+   <div class="hm-header">
+        <hm-header>登录</hm-header>
+   </div>
 </template>
 
 <script>
@@ -8,6 +10,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang='less'>
 
 </style>
