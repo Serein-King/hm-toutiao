@@ -12,7 +12,11 @@ import 'vant/lib/index.css'
 // 全局注册组件
 import HmHeader from './components/HmHeader.vue'
 import HmLogo from './components/HmLogo.vue'
-
+// 将axios 挂载到vue 原型上去
+import axios from 'axios'
+// 优化接口地址
+Vue.prototype.$axios = axios
+axios.defaults.baseURL = 'http://localhost:3000'
 Vue.component('hm-header', HmHeader)
 Vue.component('hm-logo', HmLogo)
 Vue.config.productionTip = false
