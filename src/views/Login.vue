@@ -51,11 +51,14 @@ export default {
         password: this.password
       })
       // console.log(res.data)
-      const { statusCode, message } = res.data
+      const { statusCode, message, data } = res.data
+      // console.log(data)
       if (statusCode === 200) {
         // 在组件中必须  this.$toast才能使用
         this.$toast.success(message)
         // 保存token
+        localStorage.setItem('token', data.token)
+        localStorage.setItem('userId', data.user.id)
         // 跳转到个人中心
         this.$router.push('/user')
       } else {

@@ -42,7 +42,7 @@ export default {
   methods: {
     async register () {
       const res = await this.$axios.post('/register', this.user)
-      console.log(res)
+      // console.log(res)
       const { statusCode, message } = res.data
       if (statusCode === 200) {
         // 在组件中必须  this.$toast才能使用
